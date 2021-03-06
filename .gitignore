@@ -323,3 +323,7 @@ ASALocalRun/
 
 
 .DS_Store
+
+java/out/
+
+.gradle/

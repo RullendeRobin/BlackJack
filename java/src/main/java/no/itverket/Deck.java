@@ -1,17 +1,23 @@
 package no.itverket;
 
 import java.util.ArrayDeque;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.Queue;
 
 class Deck {
-    Queue<Card> cards;
+    LinkedList<Card> cards;
 
     Deck() {
-        cards = new ArrayDeque<>();
+        cards = new LinkedList<>();
         for (Suit suit : Suit.values()) {
-            for (int i = 1; i < 14; i++) {
+            for (int i = 1; i < 6; i++) {
                 cards.offer(new Card(suit, i));
             }
         }
+    }
+
+    public void shuffle() {
+        Collections.shuffle(cards);
     }
 }
